@@ -37,16 +37,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="104dp"
+        android:id="@+id/buttonAnotherActivity"
+        android:layout_width="0dp"
         android:layout_height="52dp"
-        android:layout_marginEnd="96dp"
+        android:layout_marginEnd="124dp"
         android:layout_marginTop="200dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.458" />
+        app:layout_constraintVertical_bias="0.447" />
 
     <Button
         android:id="@+id/button2"
@@ -56,11 +56,11 @@
         android:layout_marginTop="200dp"
         android:text="Button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/button"
-        app:layout_constraintHorizontal_bias="0.875"
+        app:layout_constraintEnd_toStartOf="@id/buttonAnotherActivity"
+        app:layout_constraintHorizontal_bias="0.758"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.46" />
+        app:layout_constraintVertical_bias="0.448" />
 
     <EditText
         android:id="@+id/editText2"

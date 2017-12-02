@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(MainActivity.this, "OnCreate Called", Toast.LENGTH_SHORT).show();
+        //Toast.makeText(MainActivity.this, "OnCreate Called", Toast.LENGTH_SHORT).show();
 
         ButtonAnotherActivity = findViewById(R.id.buttonAnotherActivity);
         ButtonAnotherActivity.setOnClickListener(new View.OnClickListener(){
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+/*
     @Override
     protected void onStart() {
         super.onStart();
@@ -89,4 +89,6 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Toast.makeText(MainActivity.this, "OnPause Called", Toast.LENGTH_SHORT).show();
     }
+
+   */
 }

@@ -25,12 +25,15 @@ public class MainActivity extends AppCompatActivity {
                //Intent é uma ação, o que o aplicativo deverá fazer
 
                 /* Você pode fazer isso:
-                Intent intent = new Intent(MainActivity.this, AnotherActivity.class);
-                startActivity(intent);
+                startActivity(new Intent(MainActivity.this, AnotherActivity.class));
 
                 Ou isso: */
 
-                startActivity(new Intent(MainActivity.this, AnotherActivity.class));
+                Intent intent = new Intent(MainActivity.this, AnotherActivity.class);
+                intent.putExtra("Message", "Hello from another activity");
+                intent.putExtra("Value", 123);
+
+                startActivity(intent);
 
             }
         });

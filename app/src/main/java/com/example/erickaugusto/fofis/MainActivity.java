@@ -10,6 +10,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private Button ButtonAnotherActivity;
+    private final int REQUEST_CODE = 2;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,11 +35,30 @@ public class MainActivity extends AppCompatActivity {
                 intent.putExtra("Message", "Hello from another activity");
                 intent.putExtra("Value", 123);
 
-                startActivity(intent);
+                //startActivity(intent);
+                startActivityForResult(intent, REQUEST_CODE);
 
             }
         });
     }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode == REQUEST_CODE){
+            if(resultCode == RESULT_OK){
+                String result = data.getStringExtra("returnData");
+
+                Toast.makeText(MainActivity.this, result, Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+
+
 
     @Override
     protected void onStart() {
